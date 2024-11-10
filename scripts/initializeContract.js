@@ -3,8 +3,7 @@ module.exports = async function(callback) {
 
     try {
         const socialMedia = await SocialMedia.deployed();
-        const accounts = await web3.eth.getAccounts();
-        const testAccount = accounts[0]; // Use a primeira conta do Ganache como exemplo
+        const testAccount = '0xEA43D498e0107E42dF2F001FDEFB43543Ded2304'; // Troque pela sua conta
 
         // Adiciona recompensas à conta de teste
         await socialMedia.addReward(testAccount, web3.utils.toWei('0.01', 'ether'));
